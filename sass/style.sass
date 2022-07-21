@@ -1,14 +1,10 @@
-$light-font-color: #FFFFFF
-$button-color: #F39C12
-$form-color: #EBEBEB
-
 *
   margin: 0
   padding: 0
 
-@mixin mix-button($bg-color: $button-color, $color: $light-font-color)
-  background-color: $bg-color
-  color: $color
+button
+  background-color: #F39C12
+  color: white
   display: flex
   justify-content: center
   align-items: center
@@ -43,7 +39,7 @@ form
       padding-left: 20px
       border-radius: 25px
       border: none
-      background-color: $form-color
+      background-color: #EBEBEB
   .search
     display: flex
     justify-content: center
@@ -59,11 +55,10 @@ form
       height: 50px
       border-radius: 25px
       border: none
-      background-color: $form-color
+      background-color: #EBEBEB
       padding-left: 25px
 
-.button
-  @include mix-button
+
 
 
 #cards
@@ -94,7 +89,7 @@ form
   font-style: bold
   font-family: sans-serif
   color: red
-  background-color: $button-color
+  background-color: #F39C12
   border-radius:10px
   top: -13px
   right: -13px

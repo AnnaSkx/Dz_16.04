@@ -3,6 +3,19 @@
   padding: 0;
 }
 
+button {
+  background-color: #F39C12;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
 form {
   height: 120px;
   display: flex;
@@ -49,19 +62,6 @@ form .search input {
   border: none;
   background-color: #EBEBEB;
   padding-left: 25px;
-}
-
-.button {
-  background-color: #F39C12;
-  color: #FFFFFF;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 50px;
-  border-radius: 30px;
-  border: none;
-  cursor: pointer;
 }
 
 #cards {

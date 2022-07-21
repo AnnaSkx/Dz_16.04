@@ -15,26 +15,6 @@ const remove_card = card =>{
     localStorage.setItem('card', JSON.stringify(new_lst_card))
 }
 
-
-formElem.addEventListener('submit', event => {
-    event.preventDefault();
-    if (wordElem.value != '' && translationElem.value != '' && colorElem.value != '') {
-        add_card({
-            word: wordElem.value,
-            translation: translationElem.value,
-            color: colorElem.value,
-        });
-    } else {
-        alert('Заполните все поля!');
-    }
-    wordElem.value = '';
-    colorElem.value = '';
-    translationElem.value = '';
-    render(get_card());
-});
-
-
-
 function render(words) {
     cardsElem.innerText = '';
     for (let i = 0; i < words.length; i++) {
@@ -74,6 +54,28 @@ function render(words) {
         card.style.backgroundColor = words[i].color;
     };
 };
+
+
+formElem.addEventListener('submit', event => {
+    event.preventDefault();
+    if (wordElem.value != '' && translationElem.value != '' && colorElem.value != '') {
+        add_card({
+            word: wordElem.value,
+            translation: translationElem.value,
+            color: colorElem.value,
+        });
+    } else {
+        alert('Заполните все поля!');
+    }
+    wordElem.value = '';
+    colorElem.value = '';
+    translationElem.value = '';
+    render(get_card());
+});
+
+
+
+
 
 searchElem.addEventListener('input', event => {
     const value = event.target.value;
